@@ -1,7 +1,6 @@
 import './_vendor';
 import vars from './_vars';
 import './_functions';
-import './_components';
 
 (function() {
     var $body = document.body,
@@ -322,3 +321,20 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+import './_components';
+
+
+
+new gianniAccordion({
+    elements: ".faq__accordion .faq__item",
+    trigger: "[data-accordion-element-trigger]",
+    content: "[data-accordion-element-content]",
+
+});
+
+new gianniAccordion({
+    elements: ".faq__accordion .faq__sub",
+    trigger: "[data-accordion-element-trigger]",
+    content: "[data-accordion-element-content]",
+});
